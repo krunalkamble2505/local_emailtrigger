@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/emailtrigger/db" VERSION="2023041900" COMMENT="XMLDB file for emailtrigger"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd">
+    <TABLES>
+        <TABLE NAME="emailtrigger_log" COMMENT="This table saves emailtrigger plugin log.">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="firstname" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="Users first name."/>
+                <FIELD NAME="lastname" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="Users last name."/>
+                <FIELD NAME="email" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="Users email ID."/>
+                <FIELD NAME="mailid" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="Users email ID."/>
+                <FIELD NAME="mailsenttime" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Timestamp of email sent to user."/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="The unique id for this each log entry."/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>
